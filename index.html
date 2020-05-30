@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>Vuejs Render</title>
+</head>
+
+<body>
+    <div id="app">
+        <ol>
+            <li v-for="url in google" v-bind:title="url.title"><a v-for="url in google" v-bind:href="url.link">
+                    {{url.name}}</a></li>
+            <li v-for="url in tanks" v-bind:title="url.title"><a v-for="url in tanks"
+                    v-bind:href="url.link">{{url.name}}</a></li>
+            <li v-for="url in youtube" v-bind:title="url.title"><a v-for="url in youtube"
+                    v-bind:href="url.link">{{url.name}}</a></li>
+            <li v-for="url in pornhub" v-bind:title="url.title"><a v-for="url in pornhub"
+                    v-bind:href="url.link">{{url.name}}</a></li>
+        </ol>
+    </div>
+    <script> var app = new Vue({
+            el: '#app',
+            data: {
+                google: [{
+                    name: 'Google',
+                    title: 'Переход по ссылке',
+                    link: 'http://google.com'
+                }],
+                tanks: [{
+                    name: 'World Of Tanks',
+                    title: 'Переход по ссылке',
+                    link: 'https://worldoftanks.ru'
+                }],
+                youtube: [{
+                    name: 'Youtube',
+                    title: 'Переход по ссылке',
+                    link: 'https://youtube.com'
+                }],
+                pornhub: [{
+                    name: 'Porn Hub',
+                    title: 'Переход по ссылке',
+                    link: 'https://www.pornhub.com'
+                }]
+            }
+        })
+    </script>
+</body>
+
+</html>
